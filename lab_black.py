@@ -26,7 +26,7 @@ if sys.version_info >= (3, 6, 0):
     from black import format_str, FileMode
 
     def _format_code(code):
-        return format_str(src_contents=code, mode=FileMode())
+        return format_str(src_contents=code, mode=FileMode(line_length=100))
 
 
 else:
